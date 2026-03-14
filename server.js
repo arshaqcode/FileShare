@@ -34,7 +34,7 @@ const io = new Server(server, {
 
 app.use(cors({ origin: process.env.CORS_ORIGIN || "*" }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../frontend/public")));
 
 const uploadLimiter = rateLimit({ windowMs: 60_000, max: 20, message: "Too many uploads." });
 
